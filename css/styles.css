@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;531;700;900&display=swap');
+* {
+    box-sizing: border-box;
+}
+main {
+    height: 100vh;
+    background-color: #ddf3f5;
+    font-family: 'Raleway', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: grid;
+
+    /*grid-gap is not in use anymore => gap instead*/
+    gap: 10px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    /*IMPLICIT GRID
+    Cuando colocamos los elementos en la rejilla y , sin saberlo
+    aparece otro elemento que debe encajar en nuestra rejilla
+    Utilizamos el grid-auto
+    */
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    color: #e36387;
+    font-size: 300%;
+    font-weight: 700;
+}
+div:hover {
+    background-color: rgba(128, 0, 128, 0.8);
+    color: #e36387e8;
+}
+div:nth-child(10) {
+    background-color: #fc9d9d;
+    grid-column: 2 / -1;
+}
