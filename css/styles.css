@@ -53,7 +53,7 @@ div:nth-child(10) {
         font-size: 175%;
     }
 }
-@media (max-width: 250px) {
+@media all and (max-width: 250px) {
     main {
         grid-template-columns: auto;
         grid-template-rows: auto;
@@ -66,6 +66,8 @@ div:nth-child(10) {
         font-size: 120%;
     }
     div:nth-child(10) {
-        display: none;
+        /* display: none; */
+        grid-column: 1;
+        grid-row: 11;
     }
 }
